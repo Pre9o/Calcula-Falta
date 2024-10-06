@@ -75,7 +75,7 @@ input[type="number"]:focus {
 }
 
 button {
-    background-color: #bdbdbd;
+    background-color: #f7f7f7;
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 10px;
@@ -132,4 +132,11 @@ footer p {
 
 body.dark-mode footer p {
     color: white;
+}
+
+@media (max-width: 600px) {
+    #theme-toggle {
+        position: static;
+        margin-top: 20px;
+    }
 }

@@ -67,5 +67,5 @@ function goBackToInitial() {
 document.getElementById('theme-toggle').addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
     const themeIcon = document.getElementById('theme-icon');
-    themeIcon.src = document.body.classList.contains('dark-mode') ? 'images/escuro.png' : 'images/claro.png';
+    themeIcon.src = document.body.classList.contains('dark-mode') ? 'images/claro.png' : 'images/claro.png';
 });
