@@ -22,15 +22,14 @@
                 <button onclick="showCustomHoursInput()">Outra</button>
             </div>
             <div id="custom-hours-input" class="hidden">
-                <input type="number" id="custom-hours" placeholder="Digite a quantidade de horas">
+                <input type="number" id="custom-hours" placeholder="Digite a quantidade de horas" min="0">
                 <button onclick="selectCustomHours()">Confirmar</button>
             </div>
         </div>
         <div id="absence-screen" class="hidden">
             <h2>Digite suas faltas em horas:</h2>
-            <input type="number" id="absence-hours" placeholder="Digite suas faltas em horas">
+            <input type="number" id="absence-hours" placeholder="Digite suas faltas em horas" min="0">
             <button onclick="calculateAbsences()">Calcular</button>
-            <button onclick="goBackToInitial()">Voltar</button>
         </div>
         <div id="result-screen" class="hidden">
             <p id="result-message"></p>
