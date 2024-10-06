@@ -41,9 +41,13 @@ function calculateAbsences() {
         const resultImage = document.getElementById('result-image');
 
         if (remainingAbsences >= 0) {
+            document.getElementById('result-message').classList.remove('hidden');
+            document.getElementById('result-image').classList.remove('hidden');
             resultMessage.textContent = `Você ainda pode faltar ${remainingAbsences} horas.`;
             resultImage.src = 'images/falte.jpeg'; 
         } else {
+            document.getElementById('result-message').classList.remove('hidden');
+            document.getElementById('result-image').classList.remove('hidden');
             resultMessage.textContent = `Você ultrapassou o limite de faltas em ${Math.abs(remainingAbsences)} horas.`;
             resultImage.src = 'images/reprovou.gif'; 
         }
