@@ -21,10 +21,13 @@ body.dark-mode {
 
 .button-container button {
     display: block;
-    width: 200px;
+    width: 250px;
     margin: 10px auto;
-    padding: 10px;
-    font-size: 16px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
 }
 
 .hidden {
@@ -43,4 +46,57 @@ body.dark-mode {
 #theme-toggle img {
     width: 30px;
     height: 30px;
+}
+
+input[type="number"] {
+    width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+button {
+    background-color: #f7f7f7;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #999c99;
+}
+
+#custom-hours-input, #absence-screen {
+    margin-top: 50px;
+}
+
+input[type="number"], button {
+    margin: 15px auto;
+}
+
+
+h1 {
+    text-align: center;
+    top: 20px;
+    width: 100%;
+    font-size: 2em;
+}
+
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }

@@ -2,7 +2,8 @@ let totalHours = 0;
 
 function selectHours(hours) {
     totalHours = hours;
-    document.getElementById('absence-input').classList.remove('hidden');
+    document.getElementById('initial-screen').classList.add('hidden');
+    document.getElementById('absence-screen').classList.remove('hidden');
 }
 
 function showCustomHoursInput() {
@@ -14,7 +15,8 @@ function selectCustomHours() {
     if (customHours) {
         totalHours = parseInt(customHours);
         document.getElementById('custom-hours-input').classList.add('hidden');
-        document.getElementById('absence-input').classList.remove('hidden');
+        document.getElementById('initial-screen').classList.add('hidden');
+        document.getElementById('absence-screen').classList.remove('hidden');
     }
 }
 
@@ -34,12 +36,19 @@ function calculateAbsences() {
             resultImage.src = 'images/reprovou.gif'; 
         }
 
-        document.getElementById('result').classList.remove('hidden');
+        document.getElementById('absence-screen').classList.add('hidden');
+        document.getElementById('result-screen').classList.remove('hidden');
     }
+}
+
+function goBack() {
+    document.getElementById('absence-screen').classList.add('hidden');
+    document.getElementById('result-screen').classList.add('hidden');
+    document.getElementById('initial-screen').classList.remove('hidden');
 }
 
 document.getElementById('theme-toggle').addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
     const themeIcon = document.getElementById('theme-icon');
-    themeIcon.src = document.body.classList.contains('dark-mode') ? 'images/claro.png' : 'images/claro.png';
+    themeIcon.src = document.body.classList.contains('dark-mode') ? 'images/escuro.png' : 'images/claro.png';
 });

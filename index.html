@@ -12,24 +12,29 @@
         <button id="theme-toggle">
             <img id="theme-icon" src="images/claro.png" alt="Modo Escuro">
         </button>
-        <div class="button-container">
-            <button onclick="selectHours(30)">30 horas</button>
-            <button onclick="selectHours(45)">45 horas</button>
-            <button onclick="selectHours(60)">60 horas</button>
-            <button onclick="selectHours(90)">90 horas</button>
-            <button onclick="showCustomHoursInput()">Outra</button>
+        <div id="initial-screen">
+            <div class="button-container">
+                <button onclick="selectHours(30)">30 horas</button>
+                <button onclick="selectHours(45)">45 horas</button>
+                <button onclick="selectHours(60)">60 horas</button>
+                <button onclick="selectHours(90)">90 horas</button>
+                <button onclick="showCustomHoursInput()">Outra</button>
+            </div>
+            <div id="custom-hours-input" class="hidden">
+                <input type="number" id="custom-hours" placeholder="Digite a quantidade de horas">
+                <button onclick="selectCustomHours()">Confirmar</button>
+            </div>
         </div>
-        <div id="custom-hours-input" class="hidden">
-            <input type="number" id="custom-hours" placeholder="Digite a quantidade de horas">
-            <button onclick="selectCustomHours()">Confirmar</button>
-        </div>
-        <div id="absence-input" class="hidden">
+        <div id="absence-screen" class="hidden">
+            <h2>Digite suas faltas em horas:</h2>
             <input type="number" id="absence-hours" placeholder="Digite suas faltas em horas">
             <button onclick="calculateAbsences()">Calcular</button>
+            <button onclick="goBack()">Voltar</button>
         </div>
-        <div id="result" class="hidden">
+        <div id="result-screen" class="hidden">
             <p id="result-message"></p>
             <img id="result-image" src="" alt="">
+            <button class="back-button" onclick="goBack()">Voltar</button>
         </div>
     </div>
     <script src="script.js"></script>
