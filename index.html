@@ -29,14 +29,17 @@
             <h2>Digite suas faltas em horas:</h2>
             <input type="number" id="absence-hours" placeholder="Digite suas faltas em horas">
             <button onclick="calculateAbsences()">Calcular</button>
-            <button onclick="goBack()">Voltar</button>
+            <button onclick="goBackToInitial()">Voltar</button>
         </div>
         <div id="result-screen" class="hidden">
             <p id="result-message"></p>
             <img id="result-image" src="" alt="">
-            <button class="back-button" onclick="goBack()">Voltar</button>
+            <button class="back-button" onclick="goBackToInitial()">Voltar</button>
         </div>
     </div>
+    <footer>
+        <p>Made with love by Rafael Carneiro Pregardier ❤️</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
