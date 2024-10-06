@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Faltas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Faltas</h1>
+        <div class="button-container">
+            <button onclick="selectHours(30)">30 horas</button>
+            <button onclick="selectHours(45)">45 horas</button>
+            <button onclick="selectHours(60)">60 horas</button>
+            <button onclick="selectHours(90)">90 horas</button>
+            <button onclick="showCustomHoursInput()">Outra</button>
+        </div>
+        <div id="custom-hours-input" class="hidden">
+            <input type="number" id="custom-hours" placeholder="Digite a quantidade de horas">
+            <button onclick="selectCustomHours()">Confirmar</button>
+        </div>
+        <div id="absence-input" class="hidden">
+            <input type="number" id="absence-hours" placeholder="Digite suas faltas em horas">
+            <button onclick="calculateAbsences()">Calcular</button>
+        </div>
+        <div id="result" class="hidden">
+            <p id="result-message"></p>
+            <img id="result-image" src="" alt="">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
