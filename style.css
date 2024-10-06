@@ -5,6 +5,14 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: white;
+    color: black;
+    position: relative;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
 }
 
 .container {
@@ -21,4 +29,18 @@ body {
 
 .hidden {
     display: none;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-toggle img {
+    width: 30px;
+    height: 30px;
 }

@@ -21,19 +21,25 @@ function selectCustomHours() {
 function calculateAbsences() {
     const absenceHours = document.getElementById('absence-hours').value;
     if (absenceHours) {
-        const allowedAbsences = totalHours * 0.25;
-        const remainingAbsences = allowedAbsences - absenceHours;
+        const allowedAbsences = Math.floor(totalHours * 0.25);
+        const remainingAbsences = allowedAbsences - Math.floor(absenceHours);
         const resultMessage = document.getElementById('result-message');
         const resultImage = document.getElementById('result-image');
 
         if (remainingAbsences >= 0) {
             resultMessage.textContent = `Você ainda pode faltar ${remainingAbsences} horas.`;
-            resultImage.src = 'images.jpeg'; // Substitua pelo caminho da imagem
+            resultImage.src = 'images/falte.jpeg'; 
         } else {
             resultMessage.textContent = `Você ultrapassou o limite de faltas em ${Math.abs(remainingAbsences)} horas.`;
-            resultImage.src = './ezgif-5-49bc0d21ae.gif'; // Substitua pelo caminho da imagem
+            resultImage.src = 'images/reprovou.gif'; 
         }
 
         document.getElementById('result').classList.remove('hidden');
     }
 }
+
+document.getElementById('theme-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    const themeIcon = document.getElementById('theme-icon');
+    themeIcon.src = document.body.classList.contains('dark-mode') ? 'images/claro.png' : 'images/claro.png';
+});
