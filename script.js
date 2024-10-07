@@ -40,7 +40,7 @@ function calculateAbsences() {
         const resultMessage = document.getElementById('result-message');
         const resultImage = document.getElementById('result-image');
 
-        if (remainingAbsences >= 0) {
+        if (remainingAbsences > 0) {
             document.getElementById('result-message').classList.remove('hidden');
             document.getElementById('result-image').classList.remove('hidden');
             resultMessage.textContent = `Você ainda pode faltar ${remainingAbsences} horas.`;
