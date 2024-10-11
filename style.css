@@ -140,3 +140,15 @@ body.dark-mode footer p {
         margin-top: 20px;
     }
 }
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 70%;
+    width: 30px; 
+    height: 30px;
+    padding: 0; 
+    overflow: hidden; 
+}
+
